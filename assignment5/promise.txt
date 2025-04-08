@@ -1,0 +1,52 @@
+Example Question:
+p.then(value => console.log(value));
+
+Question 1:
+p.then(value => console.log(value));
+
+Question 2:
+p.catch(error => console.error(error));
+
+Question 3:
+p.then(value => console.log(value));
+
+Question 4:
+p.then(value => console.log(value.name));
+
+Question 5:
+p.catch(error => console.error(error));
+
+Question 6:
+p.finally(() => console.log('Promise has settled.'));
+
+Question 7:
+p.then(value => {
+  const doubled = value * 2;
+  console.log(doubled);
+});
+
+Question 8:
+p.catch(error => {
+  return 0; 
+}).then(value => {
+  console.log(value);
+});
+
+Question 9:
+Promise.all(promises).then(values => {
+  console.log(values); // Chrome logs: (3) [1, 2, 3]
+});
+
+Question 10:
+Promise.race(promises).then(value => {
+  console.log(value);
+});
+
+Bonus Question:
+p.then(value => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve('Hello ' + value), 1000);
+  });
+}).then(finalValue => {
+  console.log(finalValue); // Output after 1 second: Hello World
+});
